@@ -1,12 +1,12 @@
 use std::error::Error;
 
 use aoc_2022::{
-    days::{day::Day, day_01::Day01},
+    days::{day::Day, day_01::Day01, day_02::Day02},
     read_lines,
 };
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let days: Vec<&dyn Day> = vec![&Day01 {}];
+    let days: Vec<&dyn Day> = vec![&Day01 {}, &Day02 {}];
 
     for day in days {
         let number = day.get_day();
